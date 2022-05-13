@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   let mySum = (a + b);
-  let sumArray = [`${mySum}`, `The sum of ${a} and ${b} is ${mySum}`];
+  let sumArray = [mySum, `The sum of ${a} and ${b} is ${mySum}`];
   return sumArray;
 }
 
@@ -30,7 +30,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
   let myProduct = (a * b);
-  let productArray = [`${myProduct}`, `The product of ${a} and ${b} is ${myProduct}`];
+  let productArray = [myProduct, `The product of ${a} and ${b} is ${myProduct}`];
   return productArray;
 }
 
@@ -52,9 +52,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let myNewSum = (a + b + c);
-  let myNewProduct = (a * b * c);
-  let myNewArray = [myNewSum, myNewProduct, `${a} and ${b} and ${c} sum to ${myNewSum}.`, `The product of ${a} and ${b} and ${c} is ${myNewProduct}`];
+  let myNewSum1 = sum(a, b)[0];
+  let myNewSum2 = sum(myNewSum1, c)[0];
+  let myNewProduct1 = multiply(a, b)[0];
+  let myNewProduct2 = multiply(myNewProduct1, c)[0];
+  let myNewArray = [myNewSum2, myNewProduct2, `${a} and ${b} and ${c} sum to ${myNewSum2}.`, `The product of ${a} and ${b} and ${c} is ${myNewProduct2}`];
   return myNewArray;
 }
 
@@ -77,12 +79,14 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  let q4Sum1 = sum(testArray[0], testArray[1])[0];
+  let q4Sum2 = sum(q4Sum1, testArray[2])[0];
+  return `${testArray[0]}, ${testArray[1]}, ${testArray[2]} was passed in as an array of numbers, and ${q4Sum2} is their sum.`;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -100,6 +104,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) { //eslint-disable-line
 
 }
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
