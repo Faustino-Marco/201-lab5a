@@ -9,8 +9,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  mySum = (a + b)
-  sumArray = [`${mySum}`, `The sum of ${a} and ${b} is ${mySum}`]
+  let mySum = (a + b);
+  let sumArray = [`${mySum}`, `The sum of ${a} and ${b} is ${mySum}`];
   return sumArray;
 }
 
@@ -29,7 +29,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+  let myProduct = (a * b)
+  sumArray = [`${myProduct}`, `The sum of ${a} and ${b} is ${myProduct}`];
+  return multiply;
 }
 
 // Here is the test for multiply(); uncomment it to run it
