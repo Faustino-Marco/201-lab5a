@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   let mySum = (a + b);
-  let sumArray = [mySum, `The sum of ${a} and ${b} is ${mySum}`];
+  let sumArray = [mySum, `The sum of ${a} and ${b} is ${mySum}.`];
   return sumArray;
 }
 
@@ -30,7 +30,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
   let myProduct = (a * b);
-  let productArray = [myProduct, `The product of ${a} and ${b} is ${myProduct}`];
+  let productArray = [myProduct, `The product of ${a} and ${b} is ${myProduct}.`];
   return productArray;
 }
 
@@ -56,7 +56,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let myNewSum2 = sum(myNewSum1, c)[0];
   let myNewProduct1 = multiply(a, b)[0];
   let myNewProduct2 = multiply(myNewProduct1, c)[0];
-  let myNewArray = [myNewSum2, myNewProduct2, `${a} and ${b} and ${c} sum to ${myNewSum2}.`, `The product of ${a} and ${b} and ${c} is ${myNewProduct2}`];
+  let myNewArray = [myNewSum2, myNewProduct2, `${a} and ${b} and ${c} sum to ${myNewSum2}.`, `The product of ${a} and ${b} and ${c} is ${myNewProduct2}.`];
   return myNewArray;
 }
 
@@ -81,7 +81,8 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   let q4Sum1 = sum(testArray[0], testArray[1])[0];
   let q4Sum2 = sum(q4Sum1, testArray[2])[0];
-  return `${testArray[0]}, ${testArray[1]}, ${testArray[2]} was passed in as an array of numbers, and ${q4Sum2} is their sum.`;
+  let resultArray = [q4Sum2, `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${q4Sum2} is their sum.`];
+  return resultArray;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
